@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-cyan: #00E6D3;
+    --brand-cyan-hover: #00c7b7;
+    --brand-aqua: #55BACA;
+    --brand-teal: #5FDDDD;
+    --brand-dark: #07080E;
+    --brand-surface: #201E1E;
+    --brand-surface-2: #282828;
+    --brand-gray: #4C5064;
+    --brand-light: #F0F2F5;
+    --brand-border: #E2E8F0;
+    --text-primary: #1A202C;
+    --text-secondary: #4A5568;
+    --text-muted: #718096;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #2D3748;
+  background-color: #FFFFFF;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hide Next.js dev overlay indicator ("N" badge) */
+nextjs-portal,
+[data-nextjs-toast],
+[data-nextjs-dev-tools-button],
+#nextjs-dev-tools,
+div[data-nextjs-toast="true"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #00E6D3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00c7b7;
+}
+
+.brand-gradient {
+  background: linear-gradient(135deg, #00E6D3 0%, #55BACA 100%);
+}
+
+.brand-shadow {
+  box-shadow: 0 10px 30px -10px rgba(0, 230, 211, 0.25);
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+}
